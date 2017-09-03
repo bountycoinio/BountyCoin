@@ -253,10 +253,10 @@ contract BountyCoin is ERC20Token {
         // Cannot exceed cap
         require(totalEthers <= CAP);
 
-        // What is the BET to ETH rate
+        // What is the BCT to ETH rate
         uint256 _buyPrice = buyPrice();
 
-        // Calculate #BET - this is safe as _buyPrice is known
+        // Calculate #BCT - this is safe as _buyPrice is known
         // and msg.value is restricted to valid values
         uint tokens = msg.value * _buyPrice;
 
